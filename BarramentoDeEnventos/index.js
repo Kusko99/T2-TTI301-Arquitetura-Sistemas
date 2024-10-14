@@ -26,6 +26,8 @@ app.post('/eventos', (req, res) => {
     postEvent('http://localhost:6000/eventos', evento)
     //classificação
     postEvent('http://localhost:7000/eventos', evento)
+    //logs
+    postEvent('http://localhost:8000/eventos', evento)
     res.status(200).json({mensagem: 'ok'})
 })
 
