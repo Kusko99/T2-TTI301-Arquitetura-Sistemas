@@ -19,15 +19,15 @@ app.post('/eventos', (req, res) => {
     const evento = req.body 
     eventos.push(evento)
     //lembretes 
-    postEvent('http://localhost:4000/eventos', evento)
+    postEvent('http://lembretes-clusterip-service:4000/eventos', evento)
     //observações
-    postEvent('http://localhost:5000/eventos', evento)
+    postEvent('http://observacoes-clusterip-service:5000/eventos', evento)
     //consulta
-    postEvent('http://localhost:6000/eventos', evento)
+    postEvent('http://consulta-clusterip-service:6000/eventos', evento)
     //classificação
-    postEvent('http://localhost:7000/eventos', evento)
+    postEvent('http://classificacao-clusterip-service:7000/eventos', evento)
     //logs
-    postEvent('http://localhost:8000/eventos', evento)
+    postEvent('http://logs-clusterip-service:8000/eventos', evento)
     res.status(200).json({mensagem: 'ok'})
 })
 

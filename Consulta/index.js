@@ -39,7 +39,7 @@ res.json({msg: 'ok'})
   
   app.listen(6000, async() => {
     console.log("Consultas. Porta 6000")
-    const resp = await axios.get('http://localhost:10000/eventos')
+    const resp = await axios.get('http://barramento-de-eventos-service:10000/eventos')
     resp.data.forEach((valor,indice, colecao) => {
         try{
             funcoes[valor.type](valor.payload)

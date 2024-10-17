@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: classificacao
+spec:
+  containers:
+  - name: classificacao
+    image: rod19004680/classificacao
+    resources:
+      limits:
+        memory: 256 Mi
+        cpu: 1
+    
+  

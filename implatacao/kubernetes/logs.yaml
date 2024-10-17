@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: logs
+spec:
+  containers:
+  - name: logs
+    image: rod19004680/logs
+    resources:
+      limits:
+        memory: 256 Mi
+        cpu: 1
+    
+  
